@@ -1,0 +1,64 @@
+*
+{
+    font-family: arial;
+}
+h2
+{    
+    font-weight: 500;
+}
+div
+ {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+}
+header
+{
+    float:none;
+    width: 800px;
+    margin: auto;
+}
+h3
+{
+    font-weight: 500;
+}
+article
+{
+    float: none;
+    width: 700px;
+    margin: auto;
+}
+ul
+{
+    float: none;
+    width: 600px;
+    margin: auto;
+}
+body
+{
+    float: none;
+    width: 800px;
+    margin: auto;
+}
+textarea
+{
+    border-color:green;
+}
+select
+{
+    border-color: green;
+}
+
+button
+{
+    background-color: navy;
+    color: white;
+    border-radius: 8px;
+    margin: 0px 10px;
+    padding: 10px ;
+}
+
+
+
+
