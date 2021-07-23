@@ -35,8 +35,9 @@
                 
                 <table cellpadding="10">
                     <tr>
+                        <form action="/action_page.php" method="get">
                         <td><strong>Full Name</strong></td>
-                        <td><textarea name="fullname" rows="1" cols="50" placeholder="Enter your first name" required></textarea></td>
+                        <td><textarea name="fullname" type="text" value="fullname" oninvalid="alert('Full Name is missing!');" rows="1" cols="50" placeholder="Enter your first name" id="fullname" required></textarea></td>
                     </tr>
 
                     <tr>
@@ -47,19 +48,25 @@
                     <tr>
                         <td><strong>Gender</strong></td>
                         <td>
-                        <input type="radio" id="male" name="male" value="male">
+                        <input class="male" type="radio" name="male" value="Selected Male" onclick='addItem(this)'>
                         <label for="male">Male</label>
-                        <input type="radio" id="female" name="female" value="female">
+                        <input class="female" type="radio" name="female" value="Selected Female" onclick='addItem(this)'>
                         <label for="female">Female</label>
+                        
                     </td>
                 </tr>
+                <script>
+                    function addItem(elmt) {
+                        alert(elmt.value);
+                    }
+                </script>
                     
                     <tr>
                         <td><strong>I am an expert in</strong></td>
                         <td>
-                            <input type="checkbox" id="html" name="html" value="html">
+                            <input type="checkbox" name="html" value="html">
                             <label for="html">HTML</label>
-                            <input type="checkbox" id="css" name="css" value="css">
+                            <input type="checkbox" name="css" value="css">
                             <label for="css">CSS</label>
                         </td>
                     </tr>
@@ -77,9 +84,17 @@
                     </tr>
                 </table>
 
-                    <button class="button">Submit Form</button>
-                
-                
+                    <button class="button" onclick="getinputvalue()">Submit Form</button>
+                     
+                    <script>
+                        function getinputvalue()
+                        {
+                            var input = document.getElementById("fullname").value;
+                            alert(input);
+                        }
+                        
+                    </script>
+            </form>
             </body>
 </html>
 
